@@ -8,7 +8,7 @@ export default function () {
   return (
     ng('generate', 'directive', 'test-directive', '--export')
       .then(() =>
-        expectFileToMatch(modulePath, /exports: \[\r?\n(\s*)  TestDirectiveDirective\r?\n\1\]/),
+        expectFileToMatch(modulePath, /exports: \[\r?\n(\s*) {2}TestDirectiveDirective\r?\n\1\]/),
       )
 
       // Try to run the unit tests.

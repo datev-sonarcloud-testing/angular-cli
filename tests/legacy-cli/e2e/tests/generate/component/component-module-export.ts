@@ -8,7 +8,7 @@ export default function () {
   return (
     ng('generate', 'component', 'test-component', '--export')
       .then(() =>
-        expectFileToMatch(modulePath, /exports: \[\r?\n(\s*)  TestComponentComponent\r?\n\1\]/),
+        expectFileToMatch(modulePath, /exports: \[\r?\n(\s*) {2}TestComponentComponent\r?\n\1\]/),
       )
 
       // Try to run the unit tests.
