@@ -7,7 +7,7 @@ export default function () {
 
   return (
     ng('generate', 'pipe', 'test-pipe', '--export')
-      .then(() => expectFileToMatch(modulePath, /exports: \[\r?\n(\s*)  TestPipePipe\r?\n\1\]/))
+      .then(() => expectFileToMatch(modulePath, /exports: \[\r?\n(\s*) {2}TestPipePipe\r?\n\1\]/))
 
       // Try to run the unit tests.
       .then(() => ng('test', '--watch=false'))
